@@ -11,7 +11,9 @@ angular.module('starter.controllers', [])
         {name: 'Science'},
         {name: 'Night Life'},
         {name: 'Art'},
-        {name: 'History'}];
+        {name: 'History'},
+        {name: 'Theater'},
+        {name: 'Tourist Attractions'}];
 
     $scope.distances = [10, 20, 30, 40, 50];
 
@@ -44,6 +46,8 @@ angular.module('starter.controllers', [])
 				$scope.data = response.data;
 				$rootScope.data = response.data;
 				console.log(response.data);
+				console.log("ROOTSCOPE DATA FROM HOME");
+				console.log($rootScope.data);
                 $state.go('result');
 			}, function errorCallback(response) {
 				console.log(response)
@@ -73,7 +77,10 @@ angular.module('starter.controllers', [])
         {name: 'Science'},
         {name: 'Night Life'},
         {name: 'Art'},
-        {name: 'History'}];
+        {name: 'History'},
+        {name: 'Theater'},
+        {name: 'Tourist Attractions'}];
+
 
     $scope.result = $rootScope.data;
 
@@ -83,8 +90,11 @@ angular.module('starter.controllers', [])
 
     if ($scope.result && $scope.result.length > 0) {
         $scope.map = { center: { latitude: $scope.result[0].location.lat, longitude: $scope.result[0].location.long }, zoom: 8 };
+        console.log("MAP SET TO : " + $scope.map);
     } else {
         $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+        console.log("MAP SET TO : ");
+        console.log($scope.map);
     }
 
     $ionicModal.fromTemplateUrl('templates/modal.html', {
