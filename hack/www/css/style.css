@@ -28,3 +28,9 @@ body, .Container {
 	margin: 20px;
 	margin-left:140px;
 }
+
+.select-list {
+	display:inline-block !important;
+	//width: 200px;
+	//left: -200px
+}

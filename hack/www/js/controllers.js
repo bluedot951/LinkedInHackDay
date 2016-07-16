@@ -3,13 +3,21 @@ angular.module('starter.controllers', [])
 .controller('HomeController', function($scope, $http, $rootScope, $state) {
 
 	$scope.loc = "";
-	$scope.category = "history";
+
+    // Countries are actually categories!
+    $scope.country = {};
+    $scope.countries = [{
+        name: 'Museum'},
+        {name: 'Science'},
+        {name: 'Night Life'},
+        {name: 'Art'},
+        {name: 'History'}];
 
 	$scope.data = "";
 
 	$scope.recommend = function() {
 		// console.log(loc);
-		console.log($scope.category)
+		console.log($scope.country.selected.name)
 		console.log($scope.loc);
 
 		if ($scope.loc == "") return;
@@ -24,7 +32,7 @@ angular.module('starter.controllers', [])
 			console.log(long);
 			console.log(lat);
 
-			var url = "http://placesrec.herokuapp.com/searchPlaces?lat=" + lat + "&long=" + long + "&category=" + $scope.category + "&dist=9999999&sort=relevance/";
+			var url = "http://placesrec.herokuapp.com/searchPlaces?lat=" + lat + "&long=" + long + "&category=" + $scope.country.selected.name + "&dist=9999999&sort=relevance/";
 			console.log(url);
 
 			$http.get(url)
@@ -55,16 +63,6 @@ angular.module('starter.controllers', [])
     $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 })
 .controller('RecommendationCtrl', function($scope, $ionicModal, $rootScope, $state, $http) {
-    $scope.result = [{
-        name: 'Temple',
-        category: 'Nightclub',
-        img: 'img/adam.jpg'
-    },
-    {
-        name: 'DNA Lounge',
-        category: 'Nightclub',
-        img: 'img/ben.png'
-    }];
 
     $scope.result = $rootScope.data;
 
