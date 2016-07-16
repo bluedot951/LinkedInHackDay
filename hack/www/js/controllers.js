@@ -76,6 +76,12 @@ angular.module('starter.controllers', [])
         {name: 'History'}];
 
     $scope.result = $rootScope.data;
+    if ($scope.result) {
+        for ( i= 0; i < $scope.result.length; i++) {
+            $scope.result[i].id = i;
+            $scope.result[i].icon = 'img/map-marker.svg';
+        }
+    }
 
     $scope.home = function() {
         $state.go('home');
