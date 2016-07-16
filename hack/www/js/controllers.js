@@ -104,6 +104,7 @@ angular.module('starter.controllers', [])
         console.log(reco.name);
         console.log(reco.location);
         console.log(reco.category);
+        $scope.modal.hide();
 
         var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + reco.location + "&key=AIzaSyAqFzn85y_cm_0TKrGInkjVOEj_IgMyAFE";
         console.log("QUERYING URL : " + url);
