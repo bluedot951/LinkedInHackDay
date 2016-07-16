@@ -1,13 +1,27 @@
-<div>
-	<div>
-  		<label>Location you want to visit</label>
-  		<input type="text" ng-model="location"/>
-  	</div>
-
-  	<ion-list>
-  		<ion-checkbox ng-model="category.c1">Museum</ion-checkbox>
-  		<ion-checkbox ng-model="category.c2">Science</ion-checkbox>
-  		<ion-checkbox ng-model="category.c3">Nightlife</ion-checkbox>
-	</ion-list>
-	<button ng-click="recommend()">Recommend Me!</button>
-</div>
+<html>
+<head>
+    <title>Event Reccomendations</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <div="Container">
+  	<div="LocationTextbox">
+    		<label>Location you want to visit</label>
+    		<input type="text" ng-model="location"/>
+    </div>
+    <div="CategoryDropdown">
+    	 <select>
+        <option value="museum">Museum</option>
+        <option value="science">Science</option>
+        <option value="nightlife">Night Life</option>
+        <option value="attractions">Attractions</option>
+      </select>
+  	</ion-list>
+    </div>
+    <div="ReccommendButton">
+  	   <button ng-click="recommend()">Recommend Me!</button>
+    </div>
+  </div>
+</body>
+</html>
