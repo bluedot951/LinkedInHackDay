@@ -3,12 +3,12 @@
   <div class="details-opacity">
   <div class="details">
 
-  <ui-select ng-model="category.selected" theme="selectize" ng-disabled="disabled" style="width: 300px;" title="Choose a category">
+  <!--ui-select ng-model="category.selected" theme="selectize" ng-disabled="disabled" style="width: 300px;" title="Choose a category">
     <ui-select-match placeholder="Select Category">{{$select.selected.name}}</ui-select-match>
     <ui-select-choices repeat="category in categories | filter: $select.search">
       <span ng-bind-html="category.name | highlight: $select.search"></span>
     </ui-select-choices>
-  </ui-select>
+  </ui-select-->
 
   <ui-select ng-model="distances.selected" theme="selectize" ng-disabled="disabled" style="width: 300px;" title="Choose a distance">
     <ui-select-match placeholder="Select Distance (miles)">{{$select.selected}} miles</ui-select-match>

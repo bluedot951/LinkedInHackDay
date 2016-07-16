@@ -23,7 +23,7 @@ angular.module('starter.controllers', [])
 
 	$scope.recommend = function() {
 		// console.log(loc);
-		console.log($scope.category.selected.name)
+		//console.log($scope.category.selected.name)
 		console.log($scope.loc);
 
 		if ($scope.loc == "") return;
@@ -40,7 +40,7 @@ angular.module('starter.controllers', [])
 
 			console.log($scope.distances.selected);
 
-			var url = "http://placesrec.herokuapp.com/searchPlaces?lat=" + lat + "&long=" + long + "&category=" + $scope.category.selected.name + "&dist=" + $scope.distances.selected / 100 + "&sort=relevance/";
+			var url = "http://placesrec.herokuapp.com/searchPlaces?lat=" + lat + "&long=" + long + "&dist=" + $scope.distances.selected / 100 + "&sort=relevance/";
 			console.log(url);
 
 			$http.get(url)
