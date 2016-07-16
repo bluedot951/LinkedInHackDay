@@ -1,0 +1,12 @@
+<div class="">
+  <button class="button icon ion-location" ng-click="modal.show()"> Recommend!</button>
+</div>
+ <div class="list">
+ 	<div ng-repeat="item in result">
+    <a class="item item-thumbnail-left" href="#">
+      <img ng-src="{{item.img}}">
+      <h2>{{item.name}}</h2>
+      <p>{{item.category}}</p>
+    </a>
+    </div>
+</div>
