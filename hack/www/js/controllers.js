@@ -83,7 +83,7 @@ angular.module('starter.controllers', [])
         console.log(reco.location);
         console.log(reco.category);
 
-        var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + $scope.loc + "&key=AIzaSyAqFzn85y_cm_0TKrGInkjVOEj_IgMyAFE";
+        var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + reco.location + "&key=AIzaSyAqFzn85y_cm_0TKrGInkjVOEj_IgMyAFE";
         console.log("QUERYING URL : " + url);
 
         $http.get(url)
