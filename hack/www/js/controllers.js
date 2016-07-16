@@ -4,20 +4,22 @@ angular.module('starter.controllers', [])
 
 	$scope.loc = "";
 
-    // Countries are actually categories!
-    $scope.country = {};
-    $scope.countries = [{
+    // categories are actually categories!
+    $scope.category = {};
+    $scope.categories = [{
         name: 'Museum'},
         {name: 'Science'},
         {name: 'Night Life'},
         {name: 'Art'},
         {name: 'History'}];
 
+    $scope.distances = [10, 20, 30, 40, 50];
+
 	$scope.data = "";
 
 	$scope.recommend = function() {
 		// console.log(loc);
-		console.log($scope.country.selected.name)
+		console.log($scope.category.selected.name)
 		console.log($scope.loc);
 
 		if ($scope.loc == "") return;
@@ -32,7 +34,9 @@ angular.module('starter.controllers', [])
 			console.log(long);
 			console.log(lat);
 
-			var url = "http://placesrec.herokuapp.com/searchPlaces?lat=" + lat + "&long=" + long + "&category=" + $scope.country.selected.name + "&dist=9999999&sort=relevance/";
+			console.log($scope.distances.selected);
+
+			var url = "http://placesrec.herokuapp.com/searchPlaces?lat=" + lat + "&long=" + long + "&category=" + $scope.category.selected.name + "&dist=" + $scope.distances.selected / 10.0 + "&sort=relevance/";
 			console.log(url);
 
 			$http.get(url)
