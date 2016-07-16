@@ -15,10 +15,10 @@ body, .Container {
 }
 
 .details {
-	margin: 200px !important;
+	margin: auto;
 	padding: 20px !important;
 	background-color: lightgrey !important;
-	border: 1px solid black !important;
+	border: 3px solid black !important;
 	width:500px;
 	height:250px;
 }
