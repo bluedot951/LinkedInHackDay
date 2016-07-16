@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('HomeController', function($scope, $http) {
+.controller('HomeController', function($scope, $http, $rootScope) {
 
 	// $scope.category = {
 	// 	'c1': false,
@@ -46,6 +46,9 @@ angular.module('starter.controllers', [])
 		});
 	} 
 
+  $scope.recommend = function() {
+    //$rootScope.result = 
+  } 
 })
 .controller('MapCtrl', function($scope) {
   var latLng = new google.maps.LatLng(-34, 151);
@@ -59,7 +62,7 @@ angular.module('starter.controllers', [])
 
     $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 })
-.controller('RecommendationCtrl', function($scope, $ionicModal) {
+.controller('RecommendationCtrl', function($scope, $ionicModal, $rootScope) {
     $scope.result = [{
         name: 'Temple',
         category: 'Nightclub',
@@ -70,6 +73,8 @@ angular.module('starter.controllers', [])
         category: 'Nightclub',
         img: 'img/ben.png'
     }];
+
+    //$scope.result = $rootScope.result;
 
     $ionicModal.fromTemplateUrl('templates/modal.html', {
         scope: $scope
