@@ -34,6 +34,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/home',
     templateUrl: 'templates/home.html',
     controller: 'HomeController'
+  })
+  .state('map', {
+    url: '/map',
+    templateUrl: 'templates/map.html',
+    controller: 'MapCtrl'
+  })
+  .state('result', {
+    url: '/result',
+    templateUrl: 'templates/recommended.html',
+    controller: 'RecommendationCtrl'
   });
 
   // if none of the above states are matched, use this as the fallback
