@@ -13,7 +13,9 @@ angular.module('starter.controllers', [])
         {name: 'Art'},
         {name: 'History'},
         {name: 'Theater'},
-        {name: 'Tourist Attractions'}];
+        {name: 'Sports'},
+        {name: 'Nature'},
+        {name: 'Entertainment'}];
 
     $scope.distances = [10, 20, 30, 40, 50];
 
