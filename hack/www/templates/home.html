@@ -3,24 +3,23 @@
   <div class="details-opacity">
   <div class="details">
 
-  <!--<ui-select ng-model="category.selected" theme="selectize" ng-disabled="disabled" style="width: 300px;" title="Choose a category">
+  <ui-select ng-model="category.selected" theme="selectize" ng-disabled="disabled" style="width: 300px;" title="Choose a category">
     <ui-select-match placeholder="Select Category">{{$select.selected.name}}</ui-select-match>
     <ui-select-choices repeat="category in categories | filter: $select.search">
       <span ng-bind-html="category.name | highlight: $select.search"></span>
     </ui-select-choices>
-  </ui-select>-->
+  </ui-select>
 
-  <label class="item item-input">
-    <input type="text" placeholder="Address" ng-model="loc">
-  </label>
-  <div>
-       </div>div>
   <ui-select ng-model="distances.selected" theme="selectize" ng-disabled="disabled" style="width: 300px;" title="Choose a distance">
     <ui-select-match placeholder="Select Distance (miles)">{{$select.selected}} miles</ui-select-match>
     <ui-select-choices repeat="distance in distances | filter: $select.search">
       <span ng-bind-html="distance | highlight: $select.search"></span>
     </ui-select-choices>
   </ui-select>
+
+   <label class="item item-input">
+    <input type="text" placeholder="Address" ng-model="loc">
+  </label>
 
   <div class="recommend-btn">
   <button class="button button-assertive" ng-click="recommend()">Recommend Me!</button>
