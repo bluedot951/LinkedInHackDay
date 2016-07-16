@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('HomeController', function($scope, $http, $rootScope) {
+.controller('HomeController', function($scope, $http, $rootScope, $state) {
 
 	// $scope.category = {
 	// 	'c1': false,
@@ -35,8 +35,9 @@ angular.module('starter.controllers', [])
 
 			$http.get(url)
 			.then(function successCallback(response) {
-				$scope.data = response.data;
+				$rootScope.data = response.data;
 				console.log(response.data);
+                $state.go('result');
 			}, function errorCallback(response) {
 				console.log(response)
 			})
@@ -44,11 +45,7 @@ angular.module('starter.controllers', [])
 		}, function errorCallback(response) {
 			console.log("error occured");
 		});
-	} 
-
-  $scope.recommend = function() {
-    //$rootScope.result = 
-  } 
+	};
 })
 .controller('MapCtrl', function($scope) {
   var latLng = new google.maps.LatLng(-34, 151);
@@ -62,7 +59,7 @@ angular.module('starter.controllers', [])
 
     $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 })
-.controller('RecommendationCtrl', function($scope, $ionicModal, $rootScope) {
+.controller('RecommendationCtrl', function($scope, $ionicModal, $rootScope, $state) {
     $scope.result = [{
         name: 'Temple',
         category: 'Nightclub',
@@ -74,7 +71,11 @@ angular.module('starter.controllers', [])
         img: 'img/ben.png'
     }];
 
-    //$scope.result = $rootScope.result;
+    $scope.result = $rootScope.data;
+
+    $scope.home = function() {
+        $state.go('home');
+    };
 
     $ionicModal.fromTemplateUrl('templates/modal.html', {
         scope: $scope
