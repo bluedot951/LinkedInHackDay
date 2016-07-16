@@ -68,6 +68,13 @@ angular.module('starter.controllers', [])
 })
 .controller('RecommendationCtrl', function($scope, $ionicModal, $rootScope, $state, $http) {
 
+        $scope.categories = [{
+        name: 'Museum'},
+        {name: 'Science'},
+        {name: 'Night Life'},
+        {name: 'Art'},
+        {name: 'History'}];
+
     $scope.result = $rootScope.data;
 
     $scope.home = function() {
@@ -82,6 +89,7 @@ angular.module('starter.controllers', [])
 
     $ionicModal.fromTemplateUrl('templates/modal.html', {
         scope: $scope
+
     }).then(function(modal) {
         $scope.modal = modal;
     });

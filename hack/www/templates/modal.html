@@ -13,7 +13,8 @@
               <span class="input-label">Address</span>
               <input ng-model="reco.location" type="text">
             </label>
-            <select name="category" ng-model="reco.category" class="item">
+
+<!--             <select name="category" ng-model="reco.category" class="item">
               <option value="museum">Museum</option>
               <option value="science">Science</option>
               <option value="nightlife">Night Life</option>
@@ -21,7 +22,15 @@
               <option value="history">History</option>
               <option value="theater">Theater</option>
               <option value="tourist">Tourist Attractions</option>
-            </select>
+            </select> -->
+
+              <ui-select ng-model="category.selected" theme="selectize" ng-disabled="disabled" style="width: 300px;" title="Choose a category">
+                <ui-select-match placeholder="Select Category">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="category in categories | filter: $select.search">
+                  <span ng-bind-html="category.name | highlight: $select.search"></span>
+                </ui-select-choices>
+              </ui-select>
+
 
             <button class="button button-royal" ng-click="addRecommendation(reco)">Add!</button>
           </div>
