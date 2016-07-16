@@ -11,6 +11,7 @@ body, .Container {
   font-family: 'Lato', sans-serif;
   background-position: center top;
   background-size: cover;
+  background-color: #F0FFFF;
   margin: 0;
 }
 
