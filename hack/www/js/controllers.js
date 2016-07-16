@@ -74,14 +74,16 @@ angular.module('starter.controllers', [])
 })
 .controller('RecommendationCtrl', function($scope, $ionicModal, $rootScope, $state, $http) {
 
-        $scope.categories = [{
+		$scope.categories = [{
         name: 'Museum'},
         {name: 'Science'},
         {name: 'Night Life'},
         {name: 'Art'},
         {name: 'History'},
         {name: 'Theater'},
-        {name: 'Tourist Attractions'}];
+        {name: 'Sports'},
+        {name: 'Nature'},
+        {name: 'Entertainment'}];
 
 
     $scope.result = $rootScope.data;
