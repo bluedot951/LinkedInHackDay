@@ -1,12 +1,6 @@
-<html>
-<head>
-  <title>Event Recommendations</title>
-  <meta charset="utf-8"/>
-  <link rel="stylesheet" type="text/css" href="main.css">
-</head>
-<body>
-  <div class="list">
 
+  <div class="details">
+  <div class="list">
     <label class="item item-input item-select">
       <div class="input-label">
         Category
@@ -19,40 +13,11 @@
         <option value="history">History</option>
       </select>
     </label>
-
   </div>
 
   <label class="item item-input">
     <input type="text" placeholder="Address" ng-model="loc">
   </label>
 
-
-
-<!-- 
-  <div="Container">
-  	<div="LocationTextbox">
-    		<label>Location you want to visit</label>
-    		<input type="text" ng-model="location"/>
-    </div>
-    <div="CategoryDropdown">
-    	 <select>
-        <option value="museum">Museum</option>
-        <option value="science">Science</option>
-        <option value="nightlife">Night Life</option>
-        <option value="attractions">Attractions</option>
-      </select>
-  	</ion-list>
-  </div> -->
-  <div="RecommendButton">
-  <button ng-click="recommend()">Recommend Me!</button>
-</div>
-
-<ion-list ion-royal>
-<ion-item ng-repeat="poi in data" item-positive>
-{{poi.name}}
-</ion-item>
-</ion-list>
-
-</div>
-</body>
-</html>
+  <button class="button button-royal" ng-click="recommend()">Recommend Me!</button>
+  </div>

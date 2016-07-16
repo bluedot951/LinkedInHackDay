@@ -2,13 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('HomeController', function($scope, $http, $rootScope, $state) {
 
-	// $scope.category = {
-	// 	'c1': false,
-	// 	'c2': false,
-	// 	'c3': false
-	// };
-
-	$scope.loc = "abc";
+	$scope.loc = "";
 	$scope.category = "history";
 
 	$scope.data = "";
