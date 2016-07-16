@@ -87,8 +87,10 @@ angular.module('starter.controllers', [])
     $scope.result = $rootScope.data;
     if ($scope.result) {
         for ( i= 0; i < $scope.result.length; i++) {
+            $scope.result[i].latitude = $scope.result[i].location.lat;
+            $scope.result[i].longitude = $scope.result[i].location.long;
             $scope.result[i].id = i;
-            $scope.result[i].icon = 'img/map-marker.svg';
+            $scope.result[i].icon = 'img/map.ico';
         }
     }
 
