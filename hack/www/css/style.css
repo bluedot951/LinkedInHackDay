@@ -19,4 +19,11 @@ body, .Container {
 	padding: 20px !important;
 	background-color: lightgrey !important;
 	border: 1px solid black !important;
+	width:500px;
+	height:250px;
+}
+
+.recommend-btn {
+	margin: 20px;
+	margin-left:140px;
 }
