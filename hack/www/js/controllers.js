@@ -70,9 +70,11 @@ angular.module('starter.controllers', [])
         $state.go('home');
     };
 
-
-    $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
-    
+    if ($scope.result && $scope.result.length > 0) {
+        $scope.map = { center: { latitude: $scope.result[0].location.lat, longitude: $scope.result[0].location.long }, zoom: 8 };
+    } else {
+        $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+    }
 
     $ionicModal.fromTemplateUrl('templates/modal.html', {
         scope: $scope
