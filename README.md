@@ -1,4 +1,4 @@
-#LinkedInHackDay**
+#LinkedInHackDay
 
 ###Idea behind the app:
 Whenever you travel, you often want to do exciting things in the new places you are visiting. Usually you’d like to do things that would be enjoyable to you and things that you’d normally like to do back home. But how do you figure out what would be enjoyable to you in the new area? You can’t always rely on our friends, because they often have a different idea of enjoyment than you. That’s why we created an app that will intelligently learn from places you’ve previously visited and recommended to determine what you’d be into at the new location you visit. Our motto is to build an app that suggests what you like, not what your friends like. 
