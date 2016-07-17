@@ -1,0 +1,70 @@
+{
+ 'name': 'Golden Gate Bridge, San Francisco',
+ 'location': {
+   'lat': 37.819,
+   'long': -122.4783
+ },
+ 'categories': {
+   'art': 1,
+ }
+},
+{
+ 'name': 'Fisherman's Wharf ',
+ 'location': {
+   'lat': 37.8270,
+   'long': -122.4230
+ },
+ 'categories': {
+   'entertainment': 1,
+ }
+},
+{
+ 'name': 'Alcatraz, San Francisco',
+ 'location': {
+   'lat': 37.8270,
+   'long': -122.4230
+ },
+ 'categories': {
+   'history': 1,
+ }
+},
+{
+ 'name': 'Union Square, San Francisco',
+ 'location': {
+   'lat': 37.788056,
+   'long': -122.0475
+ },
+ 'categories': {
+   'entertainment': 1,
+ }
+},
+{
+ 'name': 'Exploratorium, San Francisco',
+ 'location': {
+   'lat': 37.8008,
+   'long': -122.3987
+ },
+ 'categories': {
+   'science': 1,
+ }
+},
+{
+ 'name': 'Mission Dolores Park, San Francisco',
+ 'location': {
+   'lat': 37.7597,
+   'long': -122.4281
+ },
+ 'categories': {
+   'nature': 1,
+ }
+},
+{
+ 'name': 'Angel Island, San Francisco',
+ 'location': {
+   'lat': 37.8609,
+   'long': -122.4326
+ },
+ 'categories': {
+   'history': 1,
+ }
+},
